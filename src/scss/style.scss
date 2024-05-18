@@ -1,0 +1,37 @@
+@use "sass:math";
+
+//*<Base>=======================================================================================================
+
+@import "base/fonts.scss";
+@import "base/function";
+@import "base/animation";
+@import "base/mixins";
+@import "base/variables";
+@import "base/reset";
+@import "base/common";
+@import "base/main-grid";
+
+//*</Base>=====================================================================================================
+
+//*<Components>================================================================================================
+
+@import "components/case";
+@import "components/map-object";
+@import "components/menu";
+@import "components/button";
+@import "components/form";
+@import "components/input";
+@import "components/site-header";
+@import "components/site-footer";
+
+//*</Components>=================================================================================================
+
+//TODO<Blocks>=================================================================================================
+
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/map-section";
+@import "blocks/advantages";
+@import "blocks/cases";
+
+//TODO</Blocks>=================================================================================================

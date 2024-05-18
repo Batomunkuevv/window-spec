@@ -1,0 +1,147 @@
+.map-object {
+    padding: 24px 24px 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 424px;
+    height: 100%;
+    background: $colorMain;
+    z-index: 2;
+    border-radius: 16px;
+    overflow: auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 767px) {
+        padding: 16px;
+        width: 80%;
+    }
+
+    @supports not selector(::-webkit-scrollbar) {
+        scrollbar-width: thin;
+        scrollbar-color: #fff $colorMain;
+    }
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: 0 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #fff;
+        border-radius: 20px;
+        border: 1px solid transparent;
+    }
+
+    &__close {
+        margin-left: auto;
+        margin-bottom: 8px;
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+
+    &__location {
+        margin-bottom: 32px;
+        display: flex;
+        align-items: start;
+        gap: 8px;
+
+        @media (max-width: 1200px) {
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 576px) {
+            margin-bottom: 16px;
+        }
+
+        &-icon {
+            width: 24px;
+            height: 24px;
+            flex: none;
+        }
+
+        &-text {
+            margin-top: 1px;
+
+            @media (max-width: 576px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+        color: #fff;
+    }
+
+    &__image {
+        margin-bottom: 15px;
+        border-radius: 16px;
+        aspect-ratio: 376/282;
+        width: 100%;
+        flex: none;
+        overflow: hidden;
+    }
+
+    &__description {
+        margin-bottom: 40px;
+    }
+
+    &__info {
+        margin-top: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+
+        @media (max-width: 767px) {
+            gap: 16px;
+        }
+
+        @media (max-width: 400px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-item {
+            padding: 16px 8px 24px;
+
+            @media (max-width: 767px) {
+                padding: 12px 8px 16px;
+            }
+
+            &:before {
+                background: linear-gradient(180deg, rgba(144, 177, 212, 0.05), rgb(144, 177, 212));
+            }
+        }
+
+        &-caption {
+            margin-bottom: 8px;
+            display: block;
+            font-family: $additionalFont;
+            line-height: 120%;
+
+            @media (max-width: 576px) {
+                font-size: 14px;
+            }
+        }
+
+        &-value {
+            font-size: 32px;
+            line-height: 120%;
+
+            @media (max-width: 767px) {
+                font-size: 24px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 20px;
+            }
+        }
+    }
+}

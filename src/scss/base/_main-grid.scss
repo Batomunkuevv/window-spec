@@ -1,0 +1,39 @@
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+}
+
+.container {
+    max-width: $maxWidthContainer;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    @media (max-width: 1500px) {
+        max-width: unset;
+    }
+}
+
+.site-page {
+    padding-top: 40px;
+    padding-bottom: 160px;
+    flex: 1 1 auto;
+
+    @media (max-width: 1500px) {
+        padding-top: 16px;
+    }
+
+    @media (max-width: 1200px) {
+        padding-bottom: 136px;
+    }
+
+    @media(max-width: 992px){
+        padding-top: 0;
+    }
+
+    @media (max-width: 767px) {
+        padding-bottom: 80px;
+    }
+}

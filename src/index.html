@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/components/_head.html',  { 
+            title: 'Окна.Спец | Строительные и ремонтные работы',
+            styles: [ 'style' ] 
+        }
+    )
+    <body>
+        <div class="site-wrapper">
+            <main class="site-page">
+                @@include('html/blocks/_hero.html',{})
+                @@include('html/blocks/_about.html',{})
+                @@include('html/blocks/_advantages.html',{})
+                @@include('html/blocks/_map.html',{})
+                @@include('html/blocks/_calculator.html',{})
+                @@include('html/blocks/_cases.html',{})
+            </main>
+            @@include('html/components/_footer.html',{})
+        </div>
+        <script defer src="./js/map.min.js"></script>
+        <script defer src="./js/lozad.min.js"></script>
+        <script defer src="./js/swiper-bundle.min.js"></script>
+        <script defer src="./js/script.js"></script>
+    </body>
+</html>

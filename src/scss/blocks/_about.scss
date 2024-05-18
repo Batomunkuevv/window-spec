@@ -1,0 +1,130 @@
+.about {
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        gap: 48px;
+
+        @media (max-width: 992px) {
+            gap: 32px;
+        }
+
+        @media(max-width: 767px){
+            flex-direction: column;
+            gap: 40px;
+            justify-content: initial;
+        }
+    }
+
+    &__content {
+        max-width: 640px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media(max-width: 767px){
+            max-width: unset;
+        }
+    }
+
+    &__title {
+    }
+
+    &__text {
+        margin-bottom: 48px;
+
+        @media(max-width: 767px){
+            margin-bottom: 32px;
+        }
+    }
+
+    &__list {
+        margin-top: auto;
+
+        &-title {
+            @media (max-width: 992px) {
+                font-size: 24px;
+            }
+        }
+
+        &-body {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+
+            @media(max-width: 576px){
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        &-item {
+            padding: 14px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 8px;
+            background: $colorMain;
+            font-size: 24px;
+            line-height: toProcent(24, 28);
+            font-weight: 500;
+            color: #fff;
+
+            @media (max-width: 1200px) {
+                font-size: 20px;
+            }
+
+            @media (max-width: 992px) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__right {
+        width: 32.12%;
+        flex: none;
+
+        @media (max-width: 992px) {
+            width: 40%;
+        }
+
+        @media(max-width: 767px){
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        &-images {
+            margin-bottom: 24px;
+            display: grid;
+            grid-template-columns: 20.7% 1fr;
+            gap: 24px;
+        }
+
+        &-glass {
+            aspect-ratio: 88/414;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        &-window {
+            aspect-ratio: 312/414;
+            height: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        &-quote {
+            font-size: 24px;
+            line-height: 150%;
+
+            @media (max-width: 1200px) {
+                font-size: 20px;
+            }
+
+            @media(max-width: 992px){
+                font-size: 16px;
+            }
+        }
+    }
+}

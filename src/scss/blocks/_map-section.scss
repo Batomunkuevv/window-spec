@@ -1,0 +1,66 @@
+.map-section {
+    &__header {
+        margin-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 64px;
+        row-gap: 32px;
+
+        @media (max-width: 1200px) {
+            column-gap: 48px;
+        }
+
+        @media (max-width: 992px) {
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__title {
+        margin-bottom: 0;
+        max-width: 872px;
+
+        @media (max-width: 1200px) {
+            max-width: unset;
+        }
+    }
+
+    &__button {
+        flex: none;
+        align-self: end;
+
+        @media (max-width: 576px) {
+            width: 100%;
+        }
+    }
+
+    &__body {
+        aspect-ratio: 1320/740;
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+
+        @media(max-width: 1200px){
+            aspect-ratio: unset;
+            height: 70vh;
+        }
+
+        @media(max-width: 400px){
+            height: 80vh;
+        }
+    }
+
+    &__map {
+        width: 100%;
+        height: 100%;
+
+        & .ymaps-2-1-79-map {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        & .ymaps-2-1-79-ground-pane {
+            filter: grayscale(1);
+        }
+    }
+}
