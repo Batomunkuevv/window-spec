@@ -32,6 +32,9 @@
                 ></path>
             </svg>
         </button>
+        <div class="menu__logo">
+            <img data-lozad src="images/placeholder.png" data-src="images/logo-blue.svg" alt="Logo" title="Logo" />
+        </div>
         <ul class="menu__list">
             <li class="menu__item">
                 <a data-anchor href="#about" class="menu__link">О компании</a>
@@ -49,8 +52,18 @@
                 <a data-anchor href="#contacts" class="menu__link">Контакты</a>
             </li>
         </ul>
+        <ul class="menu__contacts">
+            <li class="menu__contacts-item">
+                <a href="tel+ 79999999999" class="menu__contacts-link">+ 7 (999) 999 99-99</a>
+            </li>
+            <li class="menu__contacts-item">
+                <a href="mailto:okna.spec@mail.ru" class="menu__contacts-link">okna.spec@mail.ru</a>
+            </li>
+        </ul>
     </nav>
     <button type="button" class="site-header__burger">
+        <span class="site-header__burger-line"></span>
+        <span class="site-header__burger-line"></span>
         <span class="site-header__burger-line"></span>
     </button>
 </header>
@@ -66,7 +79,7 @@
                         <li class="hero__list-item">Веранды и входные группы</li>
                     </ul>
                 </div>
-                <h1 class="hero__title">Качественные окна по доступной цене</h1>
+                <h1 class="hero__title">Качественные окна по&nbsp;доступной цене</h1>
                 <p class="hero__text">
                     Воплотим любую идею в&nbsp;жизнь. Профессионально изготавливаем<br />
                     и&nbsp;устанавливаем как стандартные, так и&nbsp;нестандартные оконные системы
@@ -166,7 +179,7 @@
         <div class="cases__wrapper">
             <div class="cases__wrapper-left">
                 <h2 class="cases__title">Наши работы</h2>
-                <a href="" class="cases__button button button--dark">Оставить заявку</a>
+                <a href="" class="cases__button cases__button--desktop button button--dark">Оставить заявку</a>
             </div>
             <div data-tabs-container class="cases__body">
                 <article data-tabcontent="technical" class="case is-active">
@@ -280,6 +293,7 @@
                     </li>
                 </ul>
             </div>
+            <a href="" class="cases__button cases__button--mobile button button--dark">Оставить заявку</a>
         </div>
     </div>
 </section>

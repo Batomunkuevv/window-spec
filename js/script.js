@@ -12,6 +12,56 @@ const initLozad = () => {
     })
 }
 
+const burgerMenu = () => {
+    const burger = document.querySelector('.site-header__burger');
+    const menu = document.querySelector('.menu');
+
+    if (!burger || !menu) return;
+
+    handleClickOutsideMenu();
+    closeMenuOnClickLinks();
+    initMenuClose();
+
+    burger.addEventListener('click', showMenu);
+
+    function showMenu() {
+        menu.classList.add('is-open');
+        document.body.classList.add('is-lock');
+    }
+
+    function closeMenu() {
+        menu.classList.remove('is-open');
+        document.body.classList.remove('is-lock');
+    }
+
+    function closeMenuOnClickLinks(){
+        const menuLinks = menu.querySelectorAll('.menu__link');
+
+        menuLinks.forEach(link => link.addEventListener('click', closeMenu));
+    }
+
+    function initMenuClose() {
+        const menuClose = menu.querySelector('.menu__close');
+
+        if (!menuClose) return;
+
+        menuClose.addEventListener('click', closeMenu);
+    }
+
+    function handleClickOutsideMenu() {
+        const menuItems = Array.from(menu.querySelectorAll('*'));
+
+        window.addEventListener('click', (e) => {
+            const { target } = e;
+            const isInsideMenu = menuItems.includes(target);
+
+            if (!isInsideMenu && target !== burger && target !== menu) {
+                closeMenu()
+            }
+        })
+    }
+}
+
 const initAnchors = () => {
     const anchors = document.querySelectorAll('[data-anchor]');
 
@@ -81,6 +131,7 @@ const initCasesImagesSliders = () => {
             autoplay: {
                 delay: 5000
             },
+            grabCursor: true,
             navigation: {
                 prevEl: '.case__images-arrow--prev',
                 nextEl: '.case__images-arrow--next',
@@ -100,4 +151,5 @@ window.addEventListener("DOMContentLoaded", (e) => {
     initAnchors();
     initCasesImagesSliders();
     initTabs();
+    burgerMenu();
 });
